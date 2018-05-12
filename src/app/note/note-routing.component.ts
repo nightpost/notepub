@@ -2,17 +2,16 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { Route, extract } from '@app/core';
-import { HomeComponent } from './home.component';
+import { NoteComponent } from './note.component';
 
-const routes: Routes = [
-  Route.withShell([
-    { path: 'home', component: HomeComponent, data: { title: extract('Home') } }
-  ])
-];
+
+const routes: Routes = [Route.withShell([
+    { path: 'note', component: NoteComponent, data: { title: extract('About') } }
+  ])];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
   providers: []
 })
-export class HomeRoutingModule { }
+export class NoteRoutingModule {}
